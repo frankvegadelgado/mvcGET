@@ -1,4 +1,6 @@
-﻿@model IEnumerable<MvcGET.Models.Student>
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<MvcGET.Models.Student>
 
 @{
     ViewBag.Title = "Index";
@@ -18,16 +20,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Ime)
+            @Html.Display("Ime")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Prezime)
+            @Html.Display("Prezime")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Adresa)
+            @Html.Display("Adresa")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Grad)
+            @Html.Display("Grad")
         </th>
         <th></th>
     </tr>
@@ -52,15 +54,17 @@
                 @Html.ActionLink("Details", "Details", new { id = item.BI }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.BI }) |
                 @Ajax.ActionLink("Ispits", "IspitDetails", new { id = item.BI }, new AjaxOptions
-                                                                                   {
-                                                                                       HttpMethod = "GET",
-                                                                                       UpdateTargetId = "exams",
-                                                                                       InsertionMode = InsertionMode.Replace,
-                                                                                   })
+           {
+               HttpMethod = "GET",
+               UpdateTargetId = "exams",
+               InsertionMode = InsertionMode.Replace,
+           })
             </td>
         </tr>
     }
 
 </table>
-
+<br />
+@Html.PagedListPager(Model, page => Url.Action("Index", new { pageIndex = page, pageSize = Model.PageSize }))
+Showing @Model.FirstItemOnPage to @Model.LastItemOnPage of @Model.TotalItemCount Students
 <div id="exams" class="master-detail"></div>

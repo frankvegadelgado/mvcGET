@@ -10,7 +10,7 @@ using MvcGET.Models;
 using MvcGET.App_Start;
 using Ninject;
 using OfficeOpenXml;
-
+using PagedList;
 namespace MvcGET.Controllers
 {
 
@@ -28,9 +28,13 @@ namespace MvcGET.Controllers
         }
 
         // GET: Students
-        public ActionResult Index()
+        public ActionResult Index(int pageIndex = 1, int pageSize = 4)
         {
-            return View(db.Students.ToList());
+
+            var students = db.Students.ToList();
+            PagedList<Student> model = new PagedList<Student>(students, pageIndex, pageSize);
+            
+            return View(model);
         }
 
         // GET: Students/Details/5
