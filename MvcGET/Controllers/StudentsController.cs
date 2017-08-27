@@ -7,12 +7,24 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MvcGET.Models;
+using MvcGET.App_Start;
+using Ninject;
 
 namespace MvcGET.Controllers
 {
+
     public class StudentsController : Controller
     {
-        private SkolaDBContext db = new SkolaDBContext();
+        public virtual ISkolaDBContext db
+        {
+            get; set;
+        }
+
+        [Inject()]
+        public StudentsController(ISkolaDBContext SkolaDBContext)
+        {
+            db = SkolaDBContext;
+        }
 
         // GET: Students
         public ActionResult Index()
@@ -122,6 +134,12 @@ namespace MvcGET.Controllers
                                         .Where(i => i.StudentId == id)
                                         .Select(i => i.Ispit);
             return PartialView("_IspitDetails", exams);
+        }
+
+        [NonAction]
+        public int TotalStudent()
+        {
+            return db.Students.Count();
         }
 
         protected override void Dispose(bool disposing)

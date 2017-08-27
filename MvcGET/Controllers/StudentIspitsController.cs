@@ -7,12 +7,18 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MvcGET.Models;
+using Ninject;
 
 namespace MvcGET.Controllers
 {
     public class StudentIspitsController : Controller
     {
-        private SkolaDBContext db = new SkolaDBContext();
+        private readonly ISkolaDBContext db;
+
+        public StudentIspitsController(ISkolaDBContext SkolaDBContext)
+        {
+            db = SkolaDBContext;
+        }
 
         // GET: StudentIspits
         public ActionResult Index()

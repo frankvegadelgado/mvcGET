@@ -1,22 +1,39 @@
-﻿using System.Data.Entity;
-
+﻿using System;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 
 namespace MvcGET.Models
 {
-    public class SkolaDBContext : DbContext
+
+    public interface ISkolaDBContext: IDisposable
+    {
+        DbSet<Student> Students { get; set; }
+
+        DbSet<Ispit> Ispits { get; set; }
+
+        DbSet<Predmet> Predmets { get; set; }
+
+        DbSet<StudentIspit> StudentIspits { get; set; }
+
+        int SaveChanges();
+
+        DbEntityEntry<T> Entry<T>(T entity) where T : class;
+    }
+
+    public class SkolaDBContext : DbContext, ISkolaDBContext
     {
         public SkolaDBContext()
         {
         //    Database.SetInitializer<SkolaDBContext>(new DropCreateDatabaseAlways<SkolaDBContext>());
         }
 
-        public DbSet<Student> Students { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
 
-        public DbSet<Ispit> Ispits { get; set; }
+        public virtual DbSet<Ispit> Ispits { get; set; }
 
-        public DbSet<Predmet> Predmets { get; set; }
+        public virtual DbSet<Predmet> Predmets { get; set; }
 
-        public DbSet<StudentIspit> StudentIspits { get; set; }
+        public virtual DbSet<StudentIspit> StudentIspits { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
