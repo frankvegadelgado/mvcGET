@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using MvcGET.Models;
 using MvcGET.App_Start;
 using Ninject;
+using OfficeOpenXml;
 
 namespace MvcGET.Controllers
 {
@@ -136,11 +137,35 @@ namespace MvcGET.Controllers
             return PartialView("_IspitDetails", exams);
         }
 
-        [NonAction]
-        public int TotalStudent()
+        public void ExportToExcel()
         {
-            return db.Students.Count();
+            Student[] students = db.Students.ToArray();
+            ExcelPackage package = new ExcelPackage();
+            ExcelWorksheet workSheet = package.Workbook.Worksheets.Add("Students");
+            workSheet.Cells[1, 1].Value = "BI";
+            workSheet.Cells[1, 2].Value = "Ime";
+            workSheet.Cells[1, 3].Value = "Prezime";
+            workSheet.Cells[1, 4].Value = "Adresa";
+            workSheet.Cells[1, 5].Value = "Grad";
+            for (int i = 0; i < students.Length; i++)
+            {
+                var row = i + 2;
+                var col = 1;
+                workSheet.Cells[row, col++].Value = students[i].BI;
+                workSheet.Cells[row, col++].Value = students[i].Ime;
+                workSheet.Cells[row, col++].Value = students[i].Prezime;
+                workSheet.Cells[row, col++].Value = students[i].Adresa;
+                workSheet.Cells[row, col++].Value = students[i].Grad;
+            }
+
+            Response.Clear();
+            Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+            Response.AddHeader("content-disposition", string.Format("attachment : filename={0}", "ExcelStudent"));
+            Response.BinaryWrite(package.GetAsByteArray());
+            Response.End();
         }
+
+
 
         protected override void Dispose(bool disposing)
         {
