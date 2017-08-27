@@ -5,6 +5,11 @@ namespace MvcGET.Models
 {
     public class SkolaDBContext : DbContext
     {
+        public SkolaDBContext()
+        {
+        //    Database.SetInitializer<SkolaDBContext>(new DropCreateDatabaseAlways<SkolaDBContext>());
+        }
+
         public DbSet<Student> Students { get; set; }
 
         public DbSet<Ispit> Ispits { get; set; }

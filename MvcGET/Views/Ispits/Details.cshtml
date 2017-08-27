@@ -1,0 +1,34 @@
+﻿@model MvcGET.Models.Ispit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ispit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Predmet.Tema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Predmet.Tema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ocena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ocena)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BI }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

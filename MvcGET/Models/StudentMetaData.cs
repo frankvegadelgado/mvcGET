@@ -10,7 +10,7 @@ namespace MvcGET.Models
         [Key]
         public int BI { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Student Ime")]
         public string Ime { get; set; }
 
         [Required]

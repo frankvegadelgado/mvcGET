@@ -6,10 +6,10 @@ namespace MvcGET.Models
     [Table("StudentIspits")]
     public class StudentIspitMetaData
     {
-        [Key, Column("Student_BI", Order = 0), DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key, Column("Student_BI", Order = 0), DatabaseGenerated(DatabaseGeneratedOption.None), Display(Name = "Student")]
         public int StudentId { get; set; }
 
-        [Key, Column("Ispit_BI", Order = 1), DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key, Column("Ispit_BI", Order = 1), DatabaseGenerated(DatabaseGeneratedOption.None), Display(Name = "Ispit")]
         public int IspitId { get; set; }
 
         [ForeignKey("StudentId")]

@@ -1,0 +1,34 @@
+﻿@model MvcGET.Models.StudentIspit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student and Ispit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ispit.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ispit.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.Ime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { idStudent = Model.StudentId, idExam = Model.IspitId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

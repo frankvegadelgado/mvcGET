@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MvcGET.Models.StudentIspit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ispit.Ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.Ime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ispit.Ime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.Ime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  idStudent=item.StudentId, idExam = item.IspitId }) |
+            @Html.ActionLink("Details", "Details", new { idStudent = item.StudentId, idExam = item.IspitId }) |
+            @Html.ActionLink("Delete", "Delete", new { idStudent = item.StudentId, idExam = item.IspitId })
+        </td>
+    </tr>
+}
+
+</table>
