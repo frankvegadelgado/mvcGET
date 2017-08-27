@@ -115,6 +115,15 @@ namespace MvcGET.Controllers
             return RedirectToAction("Index");
         }
 
+        public PartialViewResult IspitDetails(int? id)
+        {
+            IEnumerable<Ispit> exams = db.StudentIspits
+                                        .Include(i => i.Ispit)
+                                        .Where(i => i.StudentId == id)
+                                        .Select(i => i.Ispit);
+            return PartialView("_IspitDetails", exams);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

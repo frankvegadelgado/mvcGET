@@ -4,6 +4,10 @@
     ViewBag.Title = "Index";
 }
 
+@section Scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+}
+
 <h2>Index</h2>
 
 <p>
@@ -26,26 +30,35 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Prezime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Adresa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Grad)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BI }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BI }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BI })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grad)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BI }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BI }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BI }) |
+                @Ajax.ActionLink("Ispits", "IspitDetails", new { id = item.BI }, new AjaxOptions
+                                                                                   {
+                                                                                       HttpMethod = "GET",
+                                                                                       UpdateTargetId = "exams",
+                                                                                       InsertionMode = InsertionMode.Replace
+                                                                                   })
+            </td>
+        </tr>
+    }
 
 </table>
+
+<div id="exams" class="master-detail"></div>
