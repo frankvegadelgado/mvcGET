@@ -3,6 +3,7 @@
 ###############################################################################
 * text=auto
 *.rb linguist-language=CSharp
+MvcGET/scripts/* linguist-vendored
 
 ###############################################################################
 # Set default behavior for command prompt diff.
