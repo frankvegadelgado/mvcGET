@@ -11,6 +11,7 @@ namespace MvcGET.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using Models;
+    using Models.Data;
 
     public static class NinjectWebCommon 
     {
@@ -63,6 +64,7 @@ namespace MvcGET.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<ISkolaDBContext>().To<SkolaDBContext>();
+            kernel.Bind<IPopulate>().To<Populate>();
         }        
     }
 }

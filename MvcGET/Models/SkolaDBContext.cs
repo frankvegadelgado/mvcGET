@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Threading.Tasks;
 
 namespace MvcGET.Models
 {
@@ -17,6 +18,8 @@ namespace MvcGET.Models
 
         int SaveChanges();
 
+        Task<int> SaveChangesAsync();
+
         DbEntityEntry<T> Entry<T>(T entity) where T : class;
     }
 
@@ -24,7 +27,7 @@ namespace MvcGET.Models
     {
         public SkolaDBContext()
         {
-        //    Database.SetInitializer<SkolaDBContext>(new DropCreateDatabaseAlways<SkolaDBContext>());
+            Database.SetInitializer(new DropCreateDatabaseAlways<SkolaDBContext>());
         }
 
         public virtual DbSet<Student> Students { get; set; }
