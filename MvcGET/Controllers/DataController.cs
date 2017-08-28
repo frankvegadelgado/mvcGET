@@ -28,7 +28,7 @@ namespace MvcGET.Controllers
             return RedirectToAction("Index", "Students"); 
         }
 
-        public void MigrateData()
+        public void DataWarehouse()
         {
             var package = mig.Export();
             Response.Clear();

@@ -36,17 +36,14 @@ namespace MvcGET.Models.Data
 
         public override void Fact(ExcelPackage package)
         {
-            ExcelWorksheet workSheet = package.Workbook.Worksheets.Add("Podatak");
-            workSheet.Cells[1, 1].Value = "BI";
-            workSheet.Cells[1, 2].Value = "Student_BI";
-            workSheet.Cells[1, 3].Value = "Ispit_BI";
-            // Approved
-            workSheet.Cells[1, 4].Value = "Odobreno";
-            // Failed
-            workSheet.Cells[1, 5].Value = "Neuspešno";
-            workSheet.Cells[1, 6].Value = "Ocena";
-            // Level
-            workSheet.Cells[1, 7].Value = "Nivo";
+            ExcelWorksheet workSheet = package.Workbook.Worksheets.Add("Cube");
+            workSheet.Cells[1, 1].Value = "ID";
+            workSheet.Cells[1, 2].Value = "StudentID";
+            workSheet.Cells[1, 3].Value = "TestID";
+            workSheet.Cells[1, 4].Value = "Approved";
+            workSheet.Cells[1, 5].Value = "Failed";
+            workSheet.Cells[1, 6].Value = "Grade";
+            workSheet.Cells[1, 7].Value = "Level";
             var facts = (from dim in db.StudentIspits.Include("Ispit")
                         select new
                         {
@@ -80,9 +77,9 @@ namespace MvcGET.Models.Data
         public override void Ispit(ExcelPackage package)
         {
             // Course
-            ExcelWorksheet workSheet = package.Workbook.Worksheets.Add("Ispit");
-            workSheet.Cells[1, 1].Value = "BI";
-            workSheet.Cells[1, 2].Value = "Tema";
+            ExcelWorksheet workSheet = package.Workbook.Worksheets.Add("TestDim");
+            workSheet.Cells[1, 1].Value = "TestID";
+            workSheet.Cells[1, 2].Value = "Subject";
             Ispit[] ispit = db.Ispits.ToArray();
             for (int i = 0; i < ispit.Length; i++)
             {
@@ -95,12 +92,12 @@ namespace MvcGET.Models.Data
 
         public override void Students(ExcelPackage package)
         {
-            ExcelWorksheet workSheet = package.Workbook.Worksheets.Add("Students");
-            workSheet.Cells[1, 1].Value = "BI";
-            workSheet.Cells[1, 2].Value = "Ime";
-            workSheet.Cells[1, 3].Value = "Prezime";
-            workSheet.Cells[1, 4].Value = "Adresa";
-            workSheet.Cells[1, 5].Value = "Grad";
+            ExcelWorksheet workSheet = package.Workbook.Worksheets.Add("StudentDim");
+            workSheet.Cells[1, 1].Value = "StudentID";
+            workSheet.Cells[1, 2].Value = "Name";
+            workSheet.Cells[1, 3].Value = "Surname";
+            workSheet.Cells[1, 4].Value = "Address";
+            workSheet.Cells[1, 5].Value = "City";
             Student[] students = db.Students.ToArray();
             for (int i = 0; i < students.Length; i++)
             {
