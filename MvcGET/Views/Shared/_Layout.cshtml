@@ -24,6 +24,28 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     @Html.Raw(TempData["msg"])
+
+    <script type="text/javascript">
+        function showProgress() {
+
+            var loading = $("#modalSending.loading");
+            loading.show();
+
+
+        }
+
+        function hideProgress() {
+
+            var loading = $("#modalSending.loading");
+            loading.hide();
+
+
+        }
+    </script>
+
+    <div class="loading" id="modalSending" style="display:none"/>
+    
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>

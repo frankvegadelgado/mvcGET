@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MvcGET.Models.Data
 {
-    enum Level { Bad, Good, Excellent }
+    enum Level { Bad = 0, Good = 1, Excellent = 2 }
 
     public interface IPopulate
     {
@@ -164,13 +164,13 @@ namespace MvcGET.Models.Data
                                          Prezime = surname,
                                          Grad = cities[rand.Next(cities.Length)]
                                      };
-                var students = studentsResult.Take(amount).Select(s => new Student
+                var students = studentsResult.OrderBy(a => Guid.NewGuid()).Take(amount).Select(s => new Student
                 {
                     Ime = s.Ime,
                     Prezime = s.Prezime,
                     Grad = s.Grad,
                     Adresa = "Adresa od " + s.Grad
-                });
+                }).ToList();
                 
                 db.Predmets.AddRange(subjects);
                 db.Students.AddRange(students);
@@ -199,7 +199,7 @@ namespace MvcGET.Models.Data
                 
                 return returnValue > 0;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }

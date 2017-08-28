@@ -1,6 +1,7 @@
 ﻿using MvcGET.Models.Data;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -11,20 +12,32 @@ namespace MvcGET.Controllers
     public class DataController : Controller
     {
         private readonly IPopulate pop;
+        private readonly ExportTemplate mig;
 
-        public DataController(IPopulate populate)
+        public DataController(IPopulate populate, ExportTemplate migrate)
         {
             pop = populate;
-
+            mig = migrate;
         }
 
         // GET: Data
-        public async Task<ActionResult> PopulateAsync(int amount)
+        public async Task<ActionResult> PopulateAsync()
         {
+            int amount = Convert.ToInt32(ConfigurationManager.AppSettings["PopulateAmount"] ?? "0");
             var success = await pop.LoadAsync(amount);
-            var message = (success) ? "Loaded succesfully" : "Cannot load the data"; 
-            TempData["msg"] = string.Format("<script>alert('{0}');</script>", message);
             return RedirectToAction("Index", "Students"); 
+        }
+
+        public void MigrateData()
+        {
+            var package = mig.Export();
+            Response.Clear();
+            Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+            Response.AddHeader("content-disposition", string.Format("attachment : filename={0}", "ExportedData"));
+            Response.BinaryWrite(package.GetAsByteArray());
+            Response.End();
+            
+
         }
     }
 }

@@ -65,6 +65,7 @@ namespace MvcGET.App_Start
         {
             kernel.Bind<ISkolaDBContext>().To<SkolaDBContext>();
             kernel.Bind<IPopulate>().To<Populate>();
+            kernel.Bind<ExportTemplate>().To<ExportDimensional>();
         }        
     }
 }

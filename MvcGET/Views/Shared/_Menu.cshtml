@@ -12,13 +12,14 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                @Html.ActionLink("Populate", "PopulateAsync", "Data",
-               new { area = "", amount = 100 },
-               new
-               {
-                   @class = "navbar-brand",
-                   onclick = "return confirm('Are you sure you want to populate the database?');",
-               })
+
+                <li>
+                    <a href="@Url.Action("PopulateAsync", "Data")" class="uifw-button xsmall black" OnClick="showProgress()"><i class="uifw-icon-standard uifw-icon-standard-check-circle xsmall "></i>Populate</a>
+                </li>
+
+                <li>
+                    <a href="@Url.Action("MigrateData", "Data")" class="uifw-button xsmall black">Export</a>
+                </li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Univerzitet <span class="caret"></span></a>
