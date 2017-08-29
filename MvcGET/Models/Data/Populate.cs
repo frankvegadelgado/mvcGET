@@ -6,13 +6,28 @@ using System.Web;
 
 namespace MvcGET.Models.Data
 {
+    /// <summary>
+    /// Level student,
+    /// Bad(0), Good(1), Excellent(2)
+    /// </summary>
     enum Level { Bad = 0, Good = 1, Excellent = 2 }
 
+    /// <summary>
+    /// Populate interface
+    /// </summary>
     public interface IPopulate
     {
+        /// <summary>
+        /// Abstract load async method
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns>Task bool: True if success, false otherwise</returns>
         Task<bool> LoadAsync(int amount);
     }
 
+    /// <summary>
+    /// Populate implementation
+    /// </summary>
     public class Populate: IPopulate
     {
         private readonly string[] names = new string[]
@@ -141,6 +156,10 @@ namespace MvcGET.Models.Data
 
         private readonly ISkolaDBContext db;
 
+        /// <summary>
+        /// Constructor by IoC
+        /// </summary>
+        /// <param name="SkolaDBContext"></param>
         public Populate(ISkolaDBContext SkolaDBContext)
         {
             db = SkolaDBContext;
@@ -149,7 +168,7 @@ namespace MvcGET.Models.Data
         /// <summary>
         /// Populate database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Task bool: True if success, false otherwise</returns>
         public async Task<bool> LoadAsync(int amount)
         {
             try

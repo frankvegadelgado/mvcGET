@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="64392f98-6a98-444a-943f-2dd0c327322e" Title="Namespaces" Url="html/d75eb659-6335-53f6-af7a-81814a21ab7f.htm">
+    <HelpTOCNode Id="df10813a-6fb3-46b2-a545-4139e5a2c3fc" Title="MvcGET.Models" Url="html/91e4d1d3-9edf-7a0e-f6e6-91887157c493.htm">
+      <HelpTOCNode Id="fa233c26-568e-4a5b-b14b-5e74a3e6aa48" Title="ISkolaDBContext Interface" Url="html/f1542a00-2e70-2ac0-995d-0e59b311a870.htm">
+        <HelpTOCNode Id="0dd42423-fc52-4a9d-9b2f-08db2c147016" Title="ISkolaDBContext Methods" Url="html/95b669d8-f207-9208-2fc0-53920f2637db.htm">
+          <HelpTOCNode Title="Entry(T) Method " Url="html/47f7d657-e133-0420-592b-b884520ced22.htm" />
+          <HelpTOCNode Title="SaveChanges Method " Url="html/163afcff-a018-9aa3-f905-d97e681e8547.htm" />
+          <HelpTOCNode Title="SaveChangesAsync Method " Url="html/af2c0b6e-d65e-c760-489c-d43713c5382f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="79f449c4-1fb2-403e-ad3c-966cbf6b6792" Title="ISkolaDBContext Properties" Url="html/34283b1a-dcb1-a0ac-6a89-691509a88f9d.htm">
+          <HelpTOCNode Title="Ispits Property " Url="html/1373cd76-164a-bfdf-d023-efb49f6a0d31.htm" />
+          <HelpTOCNode Title="Predmets Property " Url="html/a8508850-7c24-7da4-bbed-c14fcc54076a.htm" />
+          <HelpTOCNode Title="StudentIspits Property " Url="html/faf98188-78f9-c8e3-ea80-8dfd98cd6e96.htm" />
+          <HelpTOCNode Title="Students Property " Url="html/0ab6f5c7-3a60-a51a-ae29-ea76d15bb1cd.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="ac2865d1-6e78-4ae8-af89-e9724baba547" Title="Ispit Class" Url="html/afb693ff-38f7-68b1-e5e9-9d08168c4fa5.htm">
+        <HelpTOCNode Title="Ispit Constructor " Url="html/37408b83-b40e-c14c-be29-84dbbbf04a53.htm" />
+        <HelpTOCNode Id="4ade9522-dc65-4b40-83e6-c0d57f709c90" Title="Ispit Properties" Url="html/4df061f8-ecdb-e952-7d11-5a3d29c7c310.htm">
+          <HelpTOCNode Title="BI Property " Url="html/1aa7fd96-214f-2b44-1bcd-2842d82b79ae.htm" />
+          <HelpTOCNode Title="Ime Property " Url="html/53417160-2e47-8095-512d-ead7a6c8d2b6.htm" />
+          <HelpTOCNode Title="Ocena Property " Url="html/79a741f3-9adb-e2c1-ad47-0666ca96a150.htm" />
+          <HelpTOCNode Title="Predmet Property " Url="html/a4c1b8cc-5192-f4c2-e12a-30849b39ccf1.htm" />
+          <HelpTOCNode Title="PredmetId Property " Url="html/74d6fed1-f74d-9e3a-7e5b-81155c53cd58.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="5ab163cb-e377-4fa3-819d-c1dc5391c8a7" Title="IspitMetaData Class" Url="html/bf6a8ec9-d51b-864e-9a18-103c37eaf9b7.htm">
+        <HelpTOCNode Title="IspitMetaData Constructor " Url="html/941c033d-1c7f-932c-f2cf-1a8fd109c72e.htm" />
+        <HelpTOCNode Id="9d7272dd-fe79-48ff-8f97-ea89024fafd4" Title="IspitMetaData Properties" Url="html/a7a5c5d2-f8f5-c054-0c39-0f77e0e5db82.htm">
+          <HelpTOCNode Title="BI Property " Url="html/3b91c330-a9de-1f55-b93b-511452b8d299.htm" />
+          <HelpTOCNode Title="Ime Property " Url="html/b2d9b176-31fa-8fe4-287c-8366c1587557.htm" />
+          <HelpTOCNode Title="Ocena Property " Url="html/f243965a-e026-b895-0f5e-d4f3da384a18.htm" />
+          <HelpTOCNode Title="Predmet Property " Url="html/e6d6e880-b231-1826-ac66-4f736bb12a2c.htm" />
+          <HelpTOCNode Title="PredmetId Property " Url="html/c2abb3c6-f2c7-a533-1361-b96b1b9312f5.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="c3150043-b879-4f11-83f5-739fad6e6141" Title="Meni Class" Url="html/0fe79519-b518-762d-aea2-f83b45861775.htm">
+        <HelpTOCNode Title="Meni Constructor " Url="html/32d8a659-d521-1928-cf85-6673249ad394.htm" />
+        <HelpTOCNode Id="0e6e6706-a2da-4e8e-8efd-f22deea14c11" Title="Meni Properties" Url="html/549c698b-ce1f-fe49-1bc2-64c750ab0b5d.htm">
+          <HelpTOCNode Title="ActionName Property " Url="html/e9039a96-1e5c-57d9-1d59-6ea51c9301cd.htm" />
+          <HelpTOCNode Title="ControllerName Property " Url="html/dbf6428c-81e5-adce-c9a1-1d6842e3b185.htm" />
+          <HelpTOCNode Title="Name Property " Url="html/4f645115-22c9-ff31-d07c-3798e1a4405a.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a1fc7dde-5aa2-44c2-b408-a85549c8c9c5" Title="Predmet Class" Url="html/2924d239-ac01-8f1a-9ba6-4fd72f826c03.htm">
+        <HelpTOCNode Title="Predmet Constructor " Url="html/26ce168d-761a-f37b-fd95-2676c84819f5.htm" />
+        <HelpTOCNode Id="7b440050-d950-4e07-a273-cdd178ae939d" Title="Predmet Properties" Url="html/1ec64098-39d1-d74e-ab9a-d5a9547bcdc2.htm">
+          <HelpTOCNode Title="BI Property " Url="html/d7b16b51-a3cd-fe0f-d6f3-8b39893cb7ef.htm" />
+          <HelpTOCNode Title="Tema Property " Url="html/51da60d1-e807-c38e-487a-5ec4f5b222b9.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="7f9bbb99-8998-4f7c-88ae-040f12da7ccf" Title="PredmetMetaData Class" Url="html/bec9695a-8198-325f-1977-03c3aa60b37f.htm">
+        <HelpTOCNode Title="PredmetMetaData Constructor " Url="html/c5abc83d-a3ec-6493-1bfe-583e46b3dd5f.htm" />
+        <HelpTOCNode Id="36032e31-866c-417b-8f32-ae153acea8c4" Title="PredmetMetaData Properties" Url="html/d8f7d684-8ef6-1b55-ace0-dba7c2b113be.htm">
+          <HelpTOCNode Title="BI Property " Url="html/945827c2-8d67-ed23-2daf-e8e6b4703851.htm" />
+          <HelpTOCNode Title="Tema Property " Url="html/7302efd9-e8d6-f285-c3a1-fe0c61e69c01.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="e6707250-adeb-4d63-8ae2-fcc10dbe020b" Title="SkolaDBContext Class" Url="html/4af1c2e6-18a4-94bd-8896-d7b7ed5261e2.htm">
+        <HelpTOCNode Title="SkolaDBContext Constructor " Url="html/52be4902-6dd9-bb1d-be08-13e8b20954e7.htm" />
+        <HelpTOCNode Id="5393b86c-90fe-4b88-8953-5dfa1b9a2850" Title="SkolaDBContext Methods" Url="html/9b13ea7c-9565-c55c-d5e1-46c9d805d2c9.htm">
+          <HelpTOCNode Title="ISkolaDBContext.Entry Method " Url="html/178abd08-c863-711d-2a5e-3b485ab1261c.htm" />
+          <HelpTOCNode Title="OnModelCreating Method " Url="html/32b6955e-4557-fedc-cd82-fc760d2d4777.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="731a930a-78e5-4619-b052-f2333c85515c" Title="SkolaDBContext Properties" Url="html/e5901ac4-e1d8-4445-bfae-9d04323d3f7c.htm">
+          <HelpTOCNode Title="Ispits Property " Url="html/83f19acc-0eee-01e7-8209-1861f960f010.htm" />
+          <HelpTOCNode Title="Predmets Property " Url="html/add53558-5193-2de5-572c-4de8d0061790.htm" />
+          <HelpTOCNode Title="StudentIspits Property " Url="html/cfff1f7e-07bb-0548-3355-1409ad8ae908.htm" />
+          <HelpTOCNode Title="Students Property " Url="html/1a0fb836-b91c-af5a-b9e7-f82deb066cfc.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="0558e5e2-6937-4e5b-84b4-8ac37984b1ab" Title="Student Class" Url="html/bea6349f-0517-f9c5-7e90-bc335652605c.htm">
+        <HelpTOCNode Title="Student Constructor " Url="html/087b002e-a024-f9bb-56d2-42d1f4cf90bd.htm" />
+        <HelpTOCNode Id="465a8fcb-90f6-4c81-9a2b-94151d95812c" Title="Student Properties" Url="html/a479b5ed-1930-2b90-48a9-5ccd4d6f93ba.htm">
+          <HelpTOCNode Title="Adresa Property " Url="html/7721f3d4-7bb5-d43e-9d47-f16cbc9a0f2e.htm" />
+          <HelpTOCNode Title="BI Property " Url="html/ea3bfb43-30f9-a64c-49a1-2554c1720b6b.htm" />
+          <HelpTOCNode Title="Grad Property " Url="html/c6787938-b65a-7ff9-db03-f8d52facb741.htm" />
+          <HelpTOCNode Title="Ime Property " Url="html/5a79d8b2-7504-94cd-6624-82bbccd94d82.htm" />
+          <HelpTOCNode Title="Prezime Property " Url="html/c0cdc883-f6df-bcdd-0383-e71a4bb41481.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="3b6f9d77-d748-441a-b36f-b2b26d8dc3a5" Title="StudentIspit Class" Url="html/9f89b5a2-cfde-6399-f331-52ac949b6765.htm">
+        <HelpTOCNode Title="StudentIspit Constructor " Url="html/d7a4ff0d-80e4-efd9-93f8-b4662eeb7321.htm" />
+        <HelpTOCNode Id="7ad84494-637f-490d-9f77-89668df2076f" Title="StudentIspit Properties" Url="html/e4e36fa3-1fd9-2b0c-b6ac-836c77bf47e8.htm">
+          <HelpTOCNode Title="Ispit Property " Url="html/6ca6eed6-5312-280e-f002-674da7dcd216.htm" />
+          <HelpTOCNode Title="IspitId Property " Url="html/5c8d670a-67ee-3e6d-fd03-f72e5c95cd17.htm" />
+          <HelpTOCNode Title="Student Property " Url="html/dcf3f594-a36c-0921-10ca-c855122fae4b.htm" />
+          <HelpTOCNode Title="StudentId Property " Url="html/05b8ae94-7fb1-5e44-08b7-a17c1bf23e9a.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="cfb87c47-35e0-487e-bf62-070909ddacf8" Title="StudentIspitMetaData Class" Url="html/db7f6aa9-219b-0d01-c940-989634441059.htm">
+        <HelpTOCNode Title="StudentIspitMetaData Constructor " Url="html/04324105-500e-14ea-1102-b0e26f628b21.htm" />
+        <HelpTOCNode Id="19bd540e-9528-4901-a26c-7d41b91c0db3" Title="StudentIspitMetaData Properties" Url="html/dd3db304-1894-140c-733a-06ad904f91b1.htm">
+          <HelpTOCNode Title="Ispit Property " Url="html/3f424981-26c8-5fcc-1422-ed3713bcfaeb.htm" />
+          <HelpTOCNode Title="IspitId Property " Url="html/af8ebaf7-2135-f4f9-5b9a-c0fe4d58cf0f.htm" />
+          <HelpTOCNode Title="Student Property " Url="html/77ef1b5a-2600-ae08-8100-9866ffc15cd0.htm" />
+          <HelpTOCNode Title="StudentId Property " Url="html/887e9e6f-8ec4-487f-c599-1c33d07d5c3d.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="c24160d1-ab94-426d-a2f3-c674c0a37076" Title="StudentMetaData Class" Url="html/d314c635-d5b5-94d2-cbc4-efe975881df9.htm">
+        <HelpTOCNode Title="StudentMetaData Constructor " Url="html/b89dd3ad-f712-6599-1ace-8a96943b44b2.htm" />
+        <HelpTOCNode Id="cf94ac8a-4ea0-414f-b6a1-7e27f8c2a4a0" Title="StudentMetaData Properties" Url="html/670db873-bb37-edba-591e-0ddabcd02117.htm">
+          <HelpTOCNode Title="Adresa Property " Url="html/79e482b0-7ea1-c3af-b74e-25d51c163745.htm" />
+          <HelpTOCNode Title="BI Property " Url="html/076e0fd5-517e-8a7c-5d2c-bfd9d5c650f9.htm" />
+          <HelpTOCNode Title="Grad Property " Url="html/a4463921-9f11-ff47-0740-5f5afdd71d0c.htm" />
+          <HelpTOCNode Title="Ime Property " Url="html/2d22f2c4-900e-0a69-32b6-b1023e35ad41.htm" />
+          <HelpTOCNode Title="Prezime Property " Url="html/85b6e898-f074-b27f-c9d3-50cb65baa57c.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c8761de1-2b58-466e-8b81-d5050d69bd70" Title="MvcGET.Models.Data" Url="html/9adb38dc-e750-46bf-c7af-22622cc9c0f4.htm">
+      <HelpTOCNode Id="28c2cf1e-688f-4a71-a66f-050872145e03" Title="ExportDimensional Class" Url="html/45ebb875-13a9-1741-4453-c5f3887a01fe.htm">
+        <HelpTOCNode Title="ExportDimensional Constructor " Url="html/ba3d1896-5a31-2c4c-4cd8-820f12165fb2.htm" />
+        <HelpTOCNode Id="792e7dea-ef66-401f-af0f-4c80ff20983f" Title="ExportDimensional Methods" Url="html/b2f895bd-f595-860a-614a-659aad6715a4.htm">
+          <HelpTOCNode Title="Fact Method " Url="html/13b9a9f8-dc52-4456-c0fd-34c5b92102fe.htm" />
+          <HelpTOCNode Title="Ispit Method " Url="html/1528dbbe-68a3-5703-99b3-921c9f50c5c8.htm" />
+          <HelpTOCNode Title="Students Method " Url="html/f1b8c081-31cd-9fc6-f73e-bd92d3b52ad1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a5515b56-33ae-463e-931a-6e4b46c5196c" Title="ExportTemplate Class" Url="html/5ef314e8-ef5b-d3f1-7ff0-613d0ab7eab2.htm">
+        <HelpTOCNode Title="ExportTemplate Constructor " Url="html/7b30f3b0-018b-f962-4035-0888edd3e24d.htm" />
+        <HelpTOCNode Id="66a0e66d-2322-499c-a386-d9850ab79602" Title="ExportTemplate Methods" Url="html/9bec5856-ee2d-27fc-919f-688963244e0e.htm">
+          <HelpTOCNode Title="Export Method " Url="html/520e9364-a780-1488-e862-aa0986ae2567.htm" />
+          <HelpTOCNode Title="Fact Method " Url="html/c3cdc16a-775f-ab7a-798a-87e370032098.htm" />
+          <HelpTOCNode Title="Ispit Method " Url="html/276b2b8d-db9b-9f41-8023-c75d615c2eef.htm" />
+          <HelpTOCNode Title="Students Method " Url="html/3c0f6e23-3ed6-2ae2-2ddc-99938d278c24.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="b48e5fb6-43f3-49d7-99c0-0da8c8e1de88" Title="IPopulate Interface" Url="html/2c8f1e23-7b5f-c045-79f2-df472097d6a2.htm">
+        <HelpTOCNode Id="b305fc4a-3dc7-4a05-9afd-4c4e0aaeeae8" Title="IPopulate Methods" Url="html/33cc1ccf-5001-3913-82d4-e423cb344c1c.htm">
+          <HelpTOCNode Title="LoadAsync Method " Url="html/aa2d47ae-cc34-9622-0b85-70fb20b37050.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="Level Enumeration" Url="html/1a4b8324-dc68-58c3-a67f-c495c2d59f9d.htm" />
+      <HelpTOCNode Id="826590ae-8545-4237-8e0d-d6fa8e28c0da" Title="Populate Class" Url="html/cf67343f-f56a-d298-c877-b0caecf4aa93.htm">
+        <HelpTOCNode Title="Populate Constructor " Url="html/f8dac282-e9ac-de14-893a-8dbe2d13a519.htm" />
+        <HelpTOCNode Id="a9404cae-7865-4529-a602-3aa2042ed0e6" Title="Populate Methods" Url="html/696dd758-eb0d-f659-cb44-eebcd011b2a5.htm">
+          <HelpTOCNode Title="LoadAsync Method " Url="html/6f01cf65-4b72-8ede-e910-513437887e0e.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

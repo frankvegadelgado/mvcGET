@@ -6,13 +6,35 @@ using System.Web;
 
 namespace MvcGET.Models.Data
 {
-
+    /// <summary>
+    /// Export template interface
+    /// </summary>
     public abstract class ExportTemplate
     {
+
+        /// <summary>
+        /// Abstract Students method template
+        /// </summary>
+        /// <param name="package"></param>
         public abstract void Students(ExcelPackage package);
+
+        /// <summary>
+        /// Abstract Ispit method template
+        /// </summary>
+        /// <param name="package"></param>
         public abstract void Ispit(ExcelPackage package);
+
+        /// <summary>
+        /// Abstract Fact method template
+        /// </summary>
+        /// <param name="package"></param>
         public abstract void Fact(ExcelPackage package);
 
+
+        /// <summary>
+        /// Algorithm
+        /// </summary>
+        /// <returns>Excel file manager</returns>
         public ExcelPackage Export()
         {
             ExcelPackage package = new ExcelPackage();
@@ -24,16 +46,26 @@ namespace MvcGET.Models.Data
         }
     }
 
-
+    /// <summary>
+    /// Export template implementation
+    /// </summary>
     public class ExportDimensional: ExportTemplate
     {
         private readonly ISkolaDBContext db;
 
+        /// <summary>
+        /// Constructor by IoC
+        /// </summary>
+        /// <param name="SkolaDBContext"></param>
         public ExportDimensional(ISkolaDBContext SkolaDBContext)
         {
             db = SkolaDBContext;
         }
 
+        /// <summary>
+        /// Fact method template implementation
+        /// </summary>
+        /// <param name="package"></param>
         public override void Fact(ExcelPackage package)
         {
             ExcelWorksheet workSheet = package.Workbook.Worksheets.Add("Cube");
@@ -74,6 +106,10 @@ namespace MvcGET.Models.Data
             }
         }
 
+        /// <summary>
+        /// Ispit method template implementation
+        /// </summary>
+        /// <param name="package"></param>
         public override void Ispit(ExcelPackage package)
         {
             // Course
@@ -90,6 +126,10 @@ namespace MvcGET.Models.Data
             }
         }
 
+        /// <summary>
+        /// Students method template implementation
+        /// </summary>
+        /// <param name="package"></param>
         public override void Students(ExcelPackage package)
         {
             ExcelWorksheet workSheet = package.Workbook.Worksheets.Add("StudentDim");
